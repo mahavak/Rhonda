@@ -1,0 +1,862 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Navigation */
+.navbar {
+    background: #2c3e50;
+    color: white;
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #34495e;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-menu a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 100px 20px 60px;
+    margin-top: 60px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 24px;
+    opacity: 0.85;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cta-button:hover {
+    background: #2980b9;
+}
+
+/* Sections */
+.supplements-section,
+.sauna-section,
+.about-section {
+    padding: 60px 0;
+}
+
+.supplements-section {
+    background: #f8f9fa;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Supplements Detailed Layout */
+.supplements-detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.routine-section {
+    background: white;
+    padding: 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.routine-section.morning {
+    border-left: 4px solid #f39c12;
+}
+
+.routine-section.breakfast {
+    border-left: 4px solid #e67e22;
+}
+
+.routine-section.afternoon {
+    border-left: 4px solid #3498db;
+}
+
+.routine-section.evening {
+    border-left: 4px solid #9b59b6;
+}
+
+.routine-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.routine-note {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.supplement-detailed-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.supplement-detailed-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 18px;
+    transition: all 0.2s ease;
+}
+
+.supplement-detailed-card:hover {
+    border-color: #adb5bd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.supplement-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.supplement-header .supplement-icon {
+    font-size: 1.3rem;
+}
+
+.supplement-header h4 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin: 0;
+    flex: 1;
+    min-width: 120px;
+}
+
+.brand-tag {
+    background: #e8f5e8;
+    color: #2d5a2d;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #b8e6b8;
+}
+
+.dosage-info {
+    margin-top: 8px;
+}
+
+.dose-main {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.dose-notes {
+    font-size: 0.9rem;
+    color: #495057;
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+.dose-variations {
+    list-style: none;
+    margin: 8px 0;
+    padding-left: 16px;
+}
+
+.dose-variations li {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin: 4px 0;
+    position: relative;
+}
+
+.dose-variations li:before {
+    content: "→";
+    position: absolute;
+    left: -16px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.pro-tip {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 0.85rem;
+    color: #856404;
+    margin-top: 8px;
+}
+
+.benefit {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.why-reduced {
+    background: #e8f4fd;
+    border-left: 3px solid #3498db;
+    padding: 8px;
+    font-size: 0.85rem;
+    color: #2c3e50;
+    margin-top: 8px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Brand Preferences */
+.brand-preferences {
+    background: #f8f9fa;
+    padding: 24px;
+    border-radius: 6px;
+    border-left: 4px solid #28a745;
+}
+
+.brand-preferences h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.brand-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.brand-card {
+    background: white;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.brand-card h4 {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.brand-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.brand-card li {
+    padding: 4px 0;
+    color: #495057;
+    position: relative;
+    padding-left: 16px;
+    font-size: 0.9rem;
+}
+
+.brand-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Key Insights */
+.key-insights {
+    background: #fff5f5;
+    padding: 24px;
+    border-radius: 6px;
+    border-left: 4px solid #e74c3c;
+}
+
+.key-insights h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.insight-card {
+    background: white;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    border-left: 3px solid #e74c3c;
+}
+
+.insight-card h4 {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.insight-card p {
+    font-size: 0.9rem;
+    color: #495057;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Updated Disclaimer */
+.disclaimer-updated {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.disclaimer-updated h3 {
+    font-size: 1.1rem;
+    color: #856404;
+    margin-bottom: 12px;
+}
+
+.disclaimer-updated ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.disclaimer-updated li {
+    padding: 6px 0;
+    color: #856404;
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.disclaimer-updated li:before {
+    content: "⚠️";
+    position: absolute;
+    left: 0;
+}
+
+/* Sauna Section */
+.protocol-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.research-protocol,
+.personal-protocol,
+.benefits-detailed,
+.alternatives-section,
+.safety-comprehensive,
+.mechanisms-section {
+    background: white;
+    padding: 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.research-protocol h3,
+.personal-protocol h3,
+.benefits-detailed h3,
+.alternatives-section h3,
+.safety-comprehensive h3,
+.mechanisms-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: #34495e;
+    text-align: left;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 8px;
+}
+
+.research-note {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.protocol-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.protocol-item {
+    background: white;
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.protocol-icon {
+    font-size: 1.1rem;
+    margin-right: 8px;
+    display: inline;
+}
+
+.protocol-item h4 {
+    font-size: 1rem;
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    display: inline;
+}
+
+.protocol-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #34495e;
+    margin: 4px 0;
+}
+
+.protocol-note {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 4px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.benefit-icon {
+    font-size: 1.1rem;
+    margin-right: 8px;
+    display: inline;
+}
+
+.benefit-card h4 {
+    font-size: 1rem;
+    margin: 0 0 12px 0;
+    color: #2c3e50;
+    display: inline;
+}
+
+.benefit-card ul {
+    list-style: none;
+}
+
+.benefit-card li {
+    padding: 4px 0;
+    color: #7f8c8d;
+    position: relative;
+    padding-left: 16px;
+    font-size: 0.9rem;
+}
+
+.benefit-card li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #95a5a6;
+}
+
+/* Personal Protocol */
+.personal-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.personal-item {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 4px;
+    border-left: 3px solid #3498db;
+}
+
+.personal-item h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.personal-item p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+/* Hot Bath Alternative */
+.bath-protocol {
+    background: #e8f4fd;
+    padding: 16px;
+    border-radius: 4px;
+    border-left: 3px solid #3498db;
+}
+
+.bath-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.bath-item h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.bath-item p {
+    font-size: 0.9rem;
+    color: #34495e;
+    margin: 4px 0;
+}
+
+/* Safety Grid */
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.safety-card {
+    padding: 16px;
+    border-radius: 4px;
+    border-left: 4px solid;
+}
+
+.safety-card.danger {
+    background: #ffeaea;
+    border-left-color: #e74c3c;
+}
+
+.safety-card.caution {
+    background: #fff3cd;
+    border-left-color: #f39c12;
+}
+
+.safety-card.avoid {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+}
+
+.safety-card.tips {
+    background: #d4edda;
+    border-left-color: #28a745;
+}
+
+.safety-card h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.safety-card ul {
+    list-style: none;
+    margin: 0;
+}
+
+.safety-card li {
+    padding: 4px 0;
+    color: #495057;
+    position: relative;
+    padding-left: 16px;
+    font-size: 0.9rem;
+}
+
+.safety-card li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #6c757d;
+}
+
+/* Mechanisms */
+.mechanisms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.mechanism-card {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 4px;
+    border-left: 3px solid #6c5ce7;
+}
+
+.mechanism-card h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.mechanism-card p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    line-height: 1.4;
+}
+
+/* About Section */
+.about-section {
+    background: #f8f9fa;
+}
+
+.about-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-with-image {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.rhonda-image {
+    width: 150px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    flex-shrink: 0;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-content p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .about-with-image {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .rhonda-image {
+        width: 120px;
+        align-self: center;
+    }
+}
+
+.disclaimer {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.disclaimer p {
+    color: #6c757d;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+.footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .nav-menu {
+        gap: 16px;
+    }
+    
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+    
+    .protocol-container {
+        gap: 24px;
+    }
+    
+    .supplements-detailed {
+        gap: 24px;
+    }
+    
+    .supplement-detailed-cards,
+    .brand-cards,
+    .insights-grid,
+    .personal-details,
+    .bath-details,
+    .safety-grid,
+    .mechanisms-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .routine-section,
+    .brand-preferences,
+    .key-insights,
+    .research-protocol,
+    .personal-protocol,
+    .benefits-detailed,
+    .alternatives-section,
+    .safety-comprehensive,
+    .mechanisms-section {
+        padding: 16px;
+    }
+    
+    .supplement-detailed-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .supplement-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .brand-tag {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .supplement-cards,
+    .protocol-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .hero {
+        padding: 80px 16px 50px;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+}
