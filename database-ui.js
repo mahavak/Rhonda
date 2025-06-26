@@ -552,6 +552,15 @@ class RhondaDBUI {
         }
 
         const results = this.db.searchSupplements(query);
+        
+        // Google Analytics search tracking
+        if (typeof gtag !== 'undefined' && query.length >= 2) {
+            gtag('event', 'search', {
+                'search_term': query,
+                'event_category': 'engagement'
+            });
+        }
+        
         const resultsHTML = results.map(supp => `
             <div class="search-result">
                 <div class="search-result-name">${supp.name}</div>
@@ -577,6 +586,15 @@ class RhondaDBUI {
         
         this.db.trackSupplement(supplementId, true, notes);
         
+        // Google Analytics tracking
+        if (typeof gtag !== 'undefined') {
+            const supplementName = document.getElementById('supplement-select').selectedOptions[0].text;
+            gtag('event', 'track_supplement', {
+                'event_category': 'engagement',
+                'event_label': supplementName
+            });
+        }
+        
         // Clear form
         document.getElementById('supplement-select').value = '';
         document.getElementById('supplement-notes').value = '';
@@ -601,6 +619,15 @@ class RhondaDBUI {
         }
         
         this.db.trackSaunaSession(duration, temperature, notes);
+        
+        // Google Analytics tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'track_sauna', {
+                'event_category': 'engagement',
+                'event_label': 'sauna_session',
+                'value': duration
+            });
+        }
         
         // Clear form
         document.getElementById('sauna-duration').value = '20';

@@ -1,0 +1,11 @@
+# Robots.txt for Rhonda Patrick Wellness Site
+User-agent: *
+Allow: /
+Disallow: /api.php
+Disallow: /config.php
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
