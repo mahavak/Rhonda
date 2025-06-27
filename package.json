@@ -1,0 +1,46 @@
+{
+  "name": "rhonda-patrick-wellness-tracker",
+  "version": "1.0.0",
+  "description": "Progressive Web App for tracking Dr. Rhonda Patrick's wellness protocols",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test-pwa": "node -e \"require('./server.js').PWATestUtils.checkPWARequirements()\"",
+    "serve": "npx http-server . -p 3000 -c-1",
+    "serve-https": "npx http-server . -p 3001 -S -c-1",
+    "lighthouse": "npx lighthouse http://localhost:3000 --only-categories=pwa --chrome-flags='--headless'",
+    "build": "echo 'No build step required - static files ready'",
+    "validate": "node validate-pwa.js"
+  },
+  "keywords": [
+    "rhonda-patrick",
+    "wellness",
+    "supplements",
+    "sauna",
+    "pwa",
+    "progressive-web-app",
+    "health-tracking"
+  ],
+  "author": "Claude",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "lighthouse": "^11.4.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/rhonda-patrick-wellness-tracker"
+  },
+  "pwa": {
+    "name": "Rhonda Patrick Wellness Tracker",
+    "short_name": "Rhonda Tracker",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#2c3e50",
+    "background_color": "#ffffff"
+  }
+}

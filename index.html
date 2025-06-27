@@ -28,9 +28,32 @@
     <meta name="twitter:description" content="Track your wellness journey with Dr. Rhonda Patrick's exact supplement routine and sauna protocol.">
     <meta name="twitter:image" content="https://foundmyfitness.com/packs/media/redesign2019/assets/images/crowdcast_screenshot_with_iphone-6aeb75a0bfa303c22cf172a623d9d92a.jpeg">
     
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Rhonda Tracker">
+    <meta name="application-name" content="Rhonda Tracker">
+    <meta name="msapplication-TileColor" content="#2c3e50">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Favicons and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180x180.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/icons/icon-32x32.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/icons/icon-16x16.svg">
+    <link rel="mask-icon" href="/icons/icon-192x192.svg" color="#2c3e50">
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.svg">
+    <meta name="msapplication-square70x70logo" content="/icons/icon-70x70.svg">
+    <meta name="msapplication-square150x150logo" content="/icons/icon-150x150.svg">
+    <meta name="msapplication-wide310x150logo" content="/icons/icon-310x150.svg">
+    <meta name="msapplication-square310x310logo" content="/icons/icon-310x310.svg">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="style.css" as="style">
@@ -737,6 +760,27 @@
         </section>
     </main>
 
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>🔬 Stay Updated with Latest Research</h3>
+                    <p>Get weekly insights on Dr. Rhonda Patrick's latest research, supplement updates, and wellness protocols delivered to your inbox.</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-row">
+                        <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </div>
+                    <div class="newsletter-privacy">
+                        <small>No spam, unsubscribe anytime. We respect your privacy.</small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <p>Info gathered from public podcasts and interviews</p>
@@ -747,5 +791,15 @@
     <script src="script.js"></script>
     <script src="database.js"></script>
     <script src="database-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analytics-charts.js"></script>
+    <script src="newsletter.js"></script>
+    <script src="dark-mode.js"></script>
+    <script src="pwa-install.js"></script>
+    <script src="print-export.js"></script>
+    <script src="search-filter.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="calendar-integration.js"></script>
+    <script src="gamification.js"></script>
 </body>
 </html>

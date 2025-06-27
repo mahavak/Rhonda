@@ -1,0 +1,57 @@
+HOSTINGER UPLOAD GUIDE
+======================
+
+📦 DEPLOYMENT PACKAGE READY: rhonda-website.tar.gz
+
+UPLOAD METHODS:
+
+1. FILE MANAGER (Recommended)
+   • Log into Hostinger control panel
+   • Go to File Manager
+   • Navigate to public_html folder
+   • Upload rhonda-website.tar.gz
+   • Right-click → Extract
+   • Move contents from extracted folder to public_html root
+
+2. FTP/SFTP
+   • Use FileZilla or similar FTP client
+   • Connect to your Hostinger FTP
+   • Upload rhonda-website.tar.gz to public_html
+   • Extract using File Manager or command line
+
+3. DIRECT FILE UPLOAD
+   • Upload individual files:
+     - index.html (main page)
+     - style.css (styles)
+     - All .js files (functionality)
+     - manifest.json (PWA support)
+     - Any image/icon files
+
+CRITICAL FILES TO UPLOAD:
+• index.html
+• style.css
+• script.js
+• database.js
+• print-export.js
+• search-filter.js
+• accessibility.js
+• calendar-integration.js
+• gamification.js
+• manifest.json
+• service-worker.js
+• Any image/icon files
+
+HOSTINGER SPECIFIC NOTES:
+• Domain will be: yourdomain.com or subdomain.hostinger.site
+• Files go in public_html folder
+• PWA features work on HTTPS (included with Hostinger)
+• No server-side setup needed - it's a static site
+
+AFTER UPLOAD:
+1. Visit your domain
+2. Test all features
+3. Check mobile responsiveness
+4. Verify PWA install prompt works
+5. Test offline functionality
+
+Your Rhonda Patrick wellness tracker is ready to go live! 🚀
